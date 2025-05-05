@@ -26,9 +26,10 @@ export const createCart = async (
     throw new NotFoundError("User id not found!");
   }
 
-  await cartService.createCart(user_id, total_price);
+  const result = await cartService.createCart(user_id, total_price);
   return res.status(200).json({
     success: true,
     message: "Successfully create cart!",
+    data: result 
   });
 };

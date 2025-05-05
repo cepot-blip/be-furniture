@@ -34,7 +34,7 @@ export const updateCartItem = async (req: Request, res: Response) => {
     throw new NotFoundError("Product id not found!");
   }
 
-  await cartItemService.updateCartItemById(parseInt(id), {
+  const result = await cartItemService.updateCartItemById(parseInt(id), {
     id,
     cart_id,
     product_id,
@@ -44,5 +44,6 @@ export const updateCartItem = async (req: Request, res: Response) => {
   return res.status(200).json({
     status: true,
     message: "Successfully updated cart item!",
+    data: result,
   });
 };

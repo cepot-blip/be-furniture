@@ -41,7 +41,7 @@ export const createAddress = async (
     throw new InvariantError("User id already address");
   }
 
-  await addressService.createAddress(
+ const response =  await addressService.createAddress(
     user_id,
     street,
     city,
@@ -53,5 +53,6 @@ export const createAddress = async (
   return res.status(200).json({
     status: true,
     message: "Successfully create address!",
+    data: response,
   });
 };

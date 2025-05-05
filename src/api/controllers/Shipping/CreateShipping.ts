@@ -45,7 +45,7 @@ export const createShipping = async (
     throw new Error("Address id not found!");
   }
 
-  await ShippingService.createShipping(
+  const response = await ShippingService.createShipping(
     order_id,
     address_id,
     shipping_cost,
@@ -56,5 +56,6 @@ export const createShipping = async (
   return res.status(200).json({
     success: true,
     message: "Successfully create shipping!",
+    data: response,
   });
 };

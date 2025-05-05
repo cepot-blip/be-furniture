@@ -45,7 +45,7 @@ export const createPayment = async (
     amount,
   });
 
-  await PaymentService.createPayment(
+  const response = await PaymentService.createPayment(
     order_id,
     payment_method,
     payment_status,
@@ -56,5 +56,6 @@ export const createPayment = async (
   return res.status(200).json({
     success: true,
     message: "Payment created successfully",
+    data: response,
   });
 };

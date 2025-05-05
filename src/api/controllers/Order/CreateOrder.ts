@@ -40,9 +40,10 @@ export const createOrder = async (
     throw new InvariantError("Cart id not found!");
   }
 
-  await OrderService.createOrder(user_id, cart_id, total_price, status);
+  const response = await OrderService.createOrder(user_id, cart_id, total_price, status);
   return res.status(201).json({
     success: true,
     message: "Successfully create order!",
+    data: response,
   });
 };
