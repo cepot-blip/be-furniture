@@ -1,7 +1,7 @@
 import Joi from "joi";
 
 const paymentMethod = [
-  "Credit_card",
+  "Credit_Card",
   "Bank_Transfer",
   "E_Wallet",
   "Cash_on_Delivery",

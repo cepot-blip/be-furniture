@@ -1,14 +1,15 @@
-import { PrismaClient } from "@prisma/client";
+import prisma from "./prismaClient";
 
-export const UsersModels = new PrismaClient().user;
-export const ProductsModels = new PrismaClient().product;
-export const CategoriesModels = new PrismaClient().category;
-export const OrdersModels = new PrismaClient().order;
-export const OrderItemsModels = new PrismaClient().orderItem;
-export const PaymentsModels = new PrismaClient().payment;
-export const ReviewsModels = new PrismaClient().review;
-export const CartsModels = new PrismaClient().cart;
-export const CartItemsModels = new PrismaClient().cartItem;
-export const ShippingModels = new PrismaClient().shipping;
-export const AddressModels = new PrismaClient().address;
-export const CheckoutModels = new PrismaClient().checkout;
+export const UsersModels = prisma.user;
+export const ProductsModels = prisma.product;
+export const CategoriesModels = prisma.category;
+export const OrdersModels = prisma.order;
+export const OrderItemsModels = prisma.orderItem;
+export const PaymentsModels = prisma.payment;
+export const ReviewsModels = prisma.review;
+export const CartsModels = prisma.cart;
+export const CartItemsModels = prisma.cartItem;
+export const ShippingModels = prisma.shipping;
+export const AddressModels = prisma.address;
+export const CheckoutModels = prisma.checkout;
+

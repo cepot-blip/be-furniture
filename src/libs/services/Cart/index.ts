@@ -20,6 +20,7 @@ class CartService {
             product_id: true,
             quantity: true,
             subtotal_price: true,
+            product: true,
           },
         },
         orders: {
@@ -60,6 +61,7 @@ class CartService {
             product_id: true,
             quantity: true,
             subtotal_price: true,
+            product: true,
           },
         },
         orders: {
